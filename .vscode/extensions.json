@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "ms-dotnettools.csdevkit",
+    "humao.rest-client",
+    // Dev Containers runs on the host to open the remote environment.
+    "ms-vscode-remote.remote-containers"
+  ]
+}

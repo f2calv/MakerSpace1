@@ -1,0 +1,79 @@
+# Visual Studio / .NET conventions adapted from:
+# https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.env
+
+# Build and publish results
+**/[Bb]in/
+**/[Oo]bj/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+artifacts/
+publish/
+*.binlog
+MSBuild_Logs/
+
+# IDE caches and local history
+.vs/
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+.history/
+.vshistory/
+
+# Shared VS Code configuration stays trackable
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!.vscode/mcp.json
+
+# Test, coverage and benchmark output
+[Tt]est[Rr]esult*/
+*.trx
+TestResult.xml
+nunit-*.xml
+*.received.*
+coverage*.json
+coverage*.xml
+coverage*.info
+*.coverage
+*.coveragexml
+BenchmarkDotNet.Artifacts/
+
+# NuGet package output and restored packages
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+project.lock.json
+project.fragment.lock.json
+
+# Local publishing settings and certificates
+*.pubxml
+*.publishproj
+*.publishsettings
+*.azurePubxml
+*.pfx
+PublishScripts/
+
+# Temporary files and logs
+*.tmp
+*.tmp_proj
+*.log
+~$*
+*~
+
+# Local workshop restore skill
+/.github/skills/dotnet-restore/

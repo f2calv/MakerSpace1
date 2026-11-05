@@ -1,0 +1,13 @@
+{
+  "name": "MakerSpace .NET 10",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:2.3.4-10.0-noble",
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csdevkit",
+        "humao.rest-client"
+      ]
+    }
+  }
+}

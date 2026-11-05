@@ -1,3 +1,7 @@
+---
+description: Hands-on workshop for customizing GitHub Copilot with instructions and skills.
+---
+
 # MakerSpace: Copilot - Lessons from the Field
 
 <p align="center">
@@ -100,5 +104,3 @@ For option 3, perform this check after reopening the repository in the dev conta
 
 1. **Only prompt.** Don't write code or edit files by hand; ask Copilot to do it.
 2. **See rule 1.**
-
-...

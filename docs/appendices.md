@@ -1,7 +1,3 @@
----
-description: Optional reference material on Copilot token costs, activity diagnostics and customization locations.
----
-
 # Appendices
 
 ## Appendix A: Tokens and cost (optional)

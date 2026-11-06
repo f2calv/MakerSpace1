@@ -1,7 +1,3 @@
----
-description: Hands-on workshop for customizing GitHub Copilot with instructions and skills.
----
-
 # MakerSpace: Copilot - Lessons from the Field
 
 <p align="center">

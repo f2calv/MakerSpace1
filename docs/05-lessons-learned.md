@@ -1,6 +1,6 @@
 # Lessons learned from the field
 
-[Previous: Modify the App](03-modify-the-app.md) | [Next: Workshop README](../README.md)
+[Previous: Modify the App](04-modify-the-app.md) | [Next: Workshop README](../README.md)
 
 ## Contents
 
@@ -188,4 +188,4 @@ For supported behaviour, see the VS Code references for
 [instructions](https://code.visualstudio.com/docs/copilot/customization/custom-instructions)
 and [skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills).
 
-[Previous: Modify the App](03-modify-the-app.md) | [Next: Workshop README](../README.md)
+[Previous: Modify the App](04-modify-the-app.md) | [Next: Workshop README](../README.md)

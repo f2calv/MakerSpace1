@@ -1,6 +1,6 @@
 # Modify the App
 
-[Previous: Create an App](02-create-an-app.md) | [Next: Lessons Learned](04-lessons-learned.md)
+[Previous: Create an App](03-create-an-app.md) | [Next: Lessons Learned](05-lessons-learned.md)
 
 ## 1. Problems in the app
 
@@ -121,4 +121,4 @@ Commit all changes.
 We created another version of FeedbackApi earlier today on another feature branch, can you compare the FeedbackApi code you have just written to the prior FeedbackApi codebase and highlight any key differences? Is one implementation better than the other?
 ```
 
-[Previous: Create an App](02-create-an-app.md) | [Next: Lessons Learned](04-lessons-learned.md)
+[Previous: Create an App](03-create-an-app.md) | [Next: Lessons Learned](05-lessons-learned.md)

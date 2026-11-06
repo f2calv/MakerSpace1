@@ -1,6 +1,6 @@
 # Create An App
 
-[Previous: Introduction](01-introduction.md) | [Next: Modify the App](03-modify-the-app.md)
+[Previous: Skills](02-skills.md) | [Next: Modify the App](04-modify-the-app.md)
 
 ## 1. Setup Branch/Agent
 
@@ -51,7 +51,7 @@ Then prompt Copilot:
 Retry the build and launch the endpoint in a vscode browser tab.
 ```
 
-## 5. Commit All Changes
+## 6. Commit All Changes
 
 Prompt Copilot:
 
@@ -59,4 +59,4 @@ Prompt Copilot:
 Commit all changes to the current feature branch.
 ```
 
-[Previous: Introduction](01-introduction.md) | [Next: Modify the App](03-modify-the-app.md)
+[Previous: Skills](02-skills.md) | [Next: Modify the App](04-modify-the-app.md)

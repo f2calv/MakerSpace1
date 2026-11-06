@@ -101,6 +101,6 @@ the [Agent Skills specification](https://agentskills.io/specification),
 [debugging chat interactions](https://code.visualstudio.com/docs/agents/agent-troubleshooting/chat-debug-view),
 and [Copilot troubleshooting](https://code.visualstudio.com/docs/agents/agent-troubleshooting/troubleshooting).
 
-[Back to introduction](01-introduction.md)
+[Back to instructions](01-instructions.md) | [Back to skills](02-skills.md)
 
 [Back to workshop README](../README.md)

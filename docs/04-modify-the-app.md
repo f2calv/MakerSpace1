@@ -7,7 +7,7 @@
 Prompt Copilot:
 
 ```text
-Hey copilot below are listed some issues that may or may not exist in the code that you have just generated;
+Hey copilot below are listed some issues that may or may not exist in this codebase;
 
 - Multiple classes per file, rather than a class-per-file.
 - Missing GlobalUsings.cs file which would reduce usings header bloat.
@@ -39,7 +39,7 @@ When complete run a build.
 Prompt Copilot:
 
 ```text
-I find minimal Web APIs hard to read/debug and prefer the architecture of older MVC-style Controllers with attributes. Create a new "dotnet-webapi" skill, make the skill concise but populate it with best practices around Web API using Controllers, i.e. Attributes, TypedResults, ErrorDetails, etc... Specify that minimal APIs are to be avoided wherever possible.
+I find minimal Web APIs hard to read/debug and prefer the architecture of older MVC-style Controllers with attributes. Create a new "dotnet-webapi" skill, make the skill concise but populate it with best practices around Web API using Controllers, i.e. Attributes, TypedResults, ProblemDetails, etc... Specify that minimal APIs are to be avoided wherever possible.
 
 Commit the skill automatically when the first-draft is complete.
 ```
@@ -74,7 +74,7 @@ Can we improve the README.md file(s) in this repo?
 Here are some additional instructions I would like to add to the copilot-instructions.md file;
 
 - All public classes/properties/interfaces should have XML comments.
-- Interface implementations should contain the primary XML comments, any implementations of those interfaces shouldnt repeat the same XML comments they should use <inheritdoc/> instead.
+- Interface implementations should own the primary XML comments, any implementations of those interfaces shouldnt repeat the same XML comments they should use <inheritdoc/> instead.
 - Interfaces are abstractions, so their naming should not be directly related to a class, e.g. 'FileService : IFileService' is pointless. The interface name should be abstract e.g. 'FileService : IDataStorage'
 - When there is only a single known implementation of a c# interface, ask the user if they really need the interface and the complications/obsfucations that entail.
 - C# class/record/interface names should map directly to their filenames, i.e. 'public class MyClass' == MyClass.cs'
@@ -118,7 +118,7 @@ Commit all changes.
 ## 12. Review & Compare
 
 ```text
-We created another version of FeedbackApi earlier today on another feature branch, can you compare the FeedbackApi code you have just written to the prior FeedbackApi codebase and highlight any key differences? Is one implementation better than the other?
+We created another version of FeedbackApi earlier today on another feature branch, can you compare the current codebase with the prior FeedbackApi codebase? Compare structure, conventions followed, repeated corrections and build outcome? Can you determine if one implementation better than the other?
 ```
 
 ## 13. Create a containerization skill (optional)

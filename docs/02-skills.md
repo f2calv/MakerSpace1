@@ -12,9 +12,20 @@ Store each skill at `.github/skills/<skill-name>/SKILL.md`. Copilot uses its nam
 description for discovery, loads the body when relevant, and reads supporting files as needed.
 You can also invoke it through `/skill-name` when it is exposed in the slash-command menu.
 For personal folders and other supported sources, see
-[customization locations](01-instructions.md#3-where-do-instructions-and-skills-live).
+[Appendix C](appendices.md#appendix-c-where-do-instructions-and-skills-live-optional).
 
-## 2. Start with a short procedure
+## 2. Why Skills?
+
+* Capture a repeatable method instead of explaining the steps for every task.
+* Preserve diagnostic knowledge: what to check, which decisions to make and when to stop.
+* Bundle examples, templates and scripts so the agent can use the right material when needed.
+* Share a reviewed procedure with teammates and improve it as tools and workflows change.
+
+A skill gives the agent a method, not guaranteed success or extra permissions. It still
+needs suitable tools, access and verification. A restore skill guides Copilot; it does
+not change what happens when you type `dotnet build` yourself.
+
+## 3. Start with a short procedure
 
 Minimal example for `.github/skills/build-project/SKILL.md`:
 
@@ -37,7 +48,7 @@ agent to guess when prerequisites or permissions are missing.
 Keep the scope narrow: a build skill need not also own releases, deployments and API design.
 Skills can cover non-coding tasks too, such as investigating pipelines or refining work items.
 
-## 3. Frontmatter reference
+## 4. Frontmatter reference
 
 Only `name` and `description` are required. The following shows fields documented by
 VS Code and the Agent Skills standard, not a recommended minimum:
@@ -75,7 +86,7 @@ The `allowed-tools` example uses another agent's tool syntax; do not assume it g
 permissions or restricts tools in VS Code. Forked context requires
 `github.copilot.chat.skillTool.enabled`. Skills do not use `applyTo`.
 
-## 4. Verify discovery and behavior
+## 5. Verify discovery and behavior
 
 1. Open **Chat: Open Customizations** and check the skill's name and source path.
 2. In a fresh chat, ask for a task matching its description, such as "Build the project."
@@ -88,7 +99,7 @@ personal and extension customizations; check those before comparing workshop res
 See [Appendix B](appendices.md#appendix-b-debugging-and-analyzing-copilot-activity-optional)
 for diagnostics and [Lessons Learned](05-lessons-learned.md) for maintaining shared guidance.
 
-## 5. Advanced skills
+## 6. Advanced skills
 
 * Break a larger skill into optional supporting folders, keeping `SKILL.md` as the short
    entry point that directs the agent to only the material needed for the current task.

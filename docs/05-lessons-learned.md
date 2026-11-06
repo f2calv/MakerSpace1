@@ -2,6 +2,14 @@
 
 [Previous: Modify the App](04-modify-the-app.md) | [Next: Workshop README](../README.md)
 
+## Key Takeaways
+
+* Use instructions for everyday conventions.
+* Use skills for repeatable task procedures.
+* Compare before and after for adherence to your conventions and fewer corrections, not identical code.
+* Verify what guidance was loaded and what the agent actually did; guidance is not enforcement.
+* Update instructions and skills as you learn; improve existing guidance rather than continually adding more.
+
 ## Contents
 
 1. [Give the agent a team playbook](#1-give-the-agent-a-team-playbook)

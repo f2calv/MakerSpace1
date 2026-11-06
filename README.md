@@ -113,4 +113,4 @@ For option 3, perform this check after reopening the repository in the dev conta
 4. [Modify the App](docs/04-modify-the-app.md)
 5. [Lessons Learned](docs/05-lessons-learned.md)
 
-[Optional appendices](docs/appendices.md) cover tokens, cost and Copilot diagnostics.
+[Optional appendices](docs/appendices.md) cover tokens, cost, Copilot diagnostics and customization locations.

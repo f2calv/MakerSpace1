@@ -27,9 +27,9 @@ Prompt Copilot:
 ```text
 Create a new (or edit the existing) copilot-instructions.md to add this instruction;
 
-- "when I ask you to implement fixes/adjustments/fine-tuning/refactorings consider adding these as rules/conventions in the copilot-instructions.md file. If any fixes are bigger than simple instructions then create a new SKILL tailored to that purpose."
+- "when I ask you to implement fixes/adjustments/fine-tuning/refactorings consider adding these as rules/conventions in the .github/copilot-instructions.md file. If any fixes are bigger than simple instructions then create a new SKILL tailored to that purpose."
 
-Then proceed to continue down the prior list of potential issues that I have pointed out, address each item individually and then stage the changes for a manual review. Only continue to the next item after I give you the go-ahead to commit the previous update change, but also we might want to skip the manual review process and progress through the list in an unattended fashion.
+Proceed to continue down the prior list of *potential* issues that I asked you to identify, address each item individually, stage the changes for a manual review. Only continue to resolve the next issue after I give you the go-ahead to commit the previous update or ask you to skip the manual review process and progress through the list in an unattended fashion.
 
 When complete run a build.
 ```
@@ -44,7 +44,7 @@ I find minimal Web APIs hard to read/debug and prefer the architecture of older 
 Commit the skill automatically when the first-draft is complete.
 ```
 
-## 4. Lets apply that new SKILL
+## 4. Check the new SKILL is pick-up
 
 Prompt Copilot:
 
@@ -101,7 +101,7 @@ Commit all changes.
 
 ```text
 Commit all outstanding changes.
-Copy all the instructions/skills files that were created in this session into a new feature branch based on origin/main, switch to that feature branch and commit them there.
+Copy the entire contents of the .github/ folder into a new feature branch based on origin/main, switch to that feature branch and commit the copied .github folder.
 ```
 
 ## 11. Start a new session, and repeat original prompt
@@ -119,6 +119,22 @@ Commit all changes.
 
 ```text
 We created another version of FeedbackApi earlier today on another feature branch, can you compare the FeedbackApi code you have just written to the prior FeedbackApi codebase and highlight any key differences? Is one implementation better than the other?
+```
+
+## 13. Create a containerization skill (optional)
+
+Prompt Copilot:
+
+```text
+Please create a containerization skill with example multi-stage Dockerfile templates for both .NET 8 and .NET 10. Keep the Dockerfile templates very concise and minimal, as they are just examples, and store them in the skill's templates/ folder. Explain in SKILL.md when to use each template.
+```
+
+## 14. Apply the containerization skill (optional)
+
+Prompt Copilot:
+
+```text
+Please add containerization support for the API.
 ```
 
 [Previous: Create an App](03-create-an-app.md) | [Next: Lessons Learned](05-lessons-learned.md)

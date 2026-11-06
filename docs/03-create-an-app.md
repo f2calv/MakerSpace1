@@ -4,9 +4,11 @@
 
 ## 1. Setup Branch/Agent
 
-- Sync branch `main`
-- Set Github Copilot chat model to be "Auto"
-- Set Github Copilot chat permissions to "Allow All"
+- Sync this branch `origin/main` to get the latest instructions.
+- In vscode Github Copilot chat extension;
+  - Set Agent to be "Agent" this is to increase workshop velocity.
+  - Set Model model to be either "Auto" or a different model from your neighbour, this is to allow comparisions.
+  - Set Permissions to "Allow all" this is to increase workshop velocity, not to be used in productive environments.
 
 ## 2. Create the API
 
@@ -37,18 +39,17 @@ Prompt Copilot:
 Build the project and launch the endpoint in a vscode browser tab.
 ```
 
-## 5. ...if the build fails looks like you need your first skill! (optional)
+## 5. ...if the dotnet build fails you'll need your first skill! (optional)
 
 In the MakerSpace repository;
 
-- Create a folder path .github/skills/dotnet-restore
-- Create a file SKILL.md
+- Create an empty file on the path .github/skills/dotnet-restore/SKILL.md
 - Paste in content which will be shared with you...
 
 Then prompt Copilot:
 
 ```text
-Retry the build and launch the endpoint in a vscode browser tab.
+Retry build and launch the endpoint in a vscode browser tab.
 ```
 
 ## 6. Commit All Changes

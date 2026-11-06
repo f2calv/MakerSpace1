@@ -37,27 +37,7 @@ agent to guess when prerequisites or permissions are missing.
 Keep the scope narrow: a build skill need not also own releases, deployments and API design.
 Skills can cover non-coding tasks too, such as investigating pipelines or refining work items.
 
-## 3. Add supporting files only when needed
-
-A skill can bundle scripts, templates and reference material:
-
-```text
-.github/skills/build-project/
-   SKILL.md
-   references/
-      build-failures.md
-   scripts/
-      check-sdk.ps1
-```
-
-These extra folders are optional. Link to supporting files from `SKILL.md` and say when
-to read or run them. Keep the main procedure short; move detailed troubleshooting into
-references and repeatable mechanical work into reviewed scripts.
-
-Bundling a script does not execute it or grant permission to run it. A skill guides the
-agent; it does not install tools, change terminal commands or enforce compliance.
-
-## 4. Frontmatter reference
+## 3. Frontmatter reference
 
 Only `name` and `description` are required. The following shows fields documented by
 VS Code and the Agent Skills standard, not a recommended minimum:
@@ -95,7 +75,7 @@ The `allowed-tools` example uses another agent's tool syntax; do not assume it g
 permissions or restricts tools in VS Code. Forked context requires
 `github.copilot.chat.skillTool.enabled`. Skills do not use `applyTo`.
 
-## 5. Verify discovery and behavior
+## 4. Verify discovery and behavior
 
 1. Open **Chat: Open Customizations** and check the skill's name and source path.
 2. In a fresh chat, ask for a task matching its description, such as "Build the project."
@@ -107,6 +87,52 @@ A loaded skill is not proof that its steps were followed. A fresh chat also reta
 personal and extension customizations; check those before comparing workshop results.
 See [Appendix B](appendices.md#appendix-b-debugging-and-analyzing-copilot-activity-optional)
 for diagnostics and [Lessons Learned](05-lessons-learned.md) for maintaining shared guidance.
+
+## 5. Advanced skills
+
+* Break a larger skill into optional supporting folders, keeping `SKILL.md` as the short
+   entry point that directs the agent to only the material needed for the current task.
+
+Link to supporting files from `SKILL.md` and say when to read or run them. Move detailed
+troubleshooting into references and repeatable mechanical work into reviewed scripts.
+Bundling a script does not execute it or grant permission to run it. A skill guides the
+agent; it does not install tools, change terminal commands or enforce compliance.
+
+The central [skill library](https://github.com/f2calv/.github/tree/main/.github/skills)
+uses the following folder types. This illustrative layout combines the possibilities;
+an individual skill rarely needs all of them:
+
+```text
+.github/skills/project-maintenance/
+|-- SKILL.md                       # Triggers, decisions, procedure and checks
+|-- references/                    # Detailed guidance, read when needed
+|   |-- build-failures.md
+|   `-- platform-notes.md
+|-- examples/                      # Worked cases to consult selectively
+|   `-- minimal-project.md
+|-- scripts/                       # Reviewed executable helpers
+|   |-- Invoke-Sdk-Check.ps1
+|   `-- tests/
+|       `-- Invoke-Sdk-Check.Tests.ps1
+|-- templates/                     # Starting points for generated files
+|   `-- report.md.tmpl
+|-- assets/                        # Supporting resources or starter documents
+|   `-- review-checklist.md
+`-- fragments/                     # Reusable pieces assembled as needed
+      `-- dotnet.editorconfig
+```
+
+Folder names organise content; they are not special activation rules. Templates and assets
+can overlap in purpose, so choose a clear home rather than duplicating files.
+In `SKILL.md`, give explicit directions such as: "If the build reports a missing SDK,
+read `references/build-failures.md`; otherwise skip it."
+
+This is **progressive disclosure**: discovery metadata, including the name and description,
+uses context; the main skill body loads when selected, and supporting file contents load
+when read. Merely storing files in these folders does not add their full contents to the
+model's token count. Loading unnecessary references defeats the saving, and loaded content
+can remain in conversation context. Scripts can avoid loading implementation details as
+prose, but their tool calls and returned output can still consume tokens.
 
 References: [VS Code agent skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills)
 and the [Agent Skills specification](https://agentskills.io/specification).

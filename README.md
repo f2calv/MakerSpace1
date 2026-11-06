@@ -101,12 +101,4 @@ For option 3, perform this check after reopening the repository in the dev conta
 1. **Only prompt.** Don't write code or edit files by hand; ask Copilot to do it.
 2. **See rule 1.**
 
-## 3. Workshop Pages
-
-1. [Instructions](docs/01-instructions.md)
-2. [Skills](docs/02-skills.md)
-3. [Create an App](docs/03-create-an-app.md)
-4. [Modify the App](docs/04-modify-the-app.md)
-5. [Lessons Learned](docs/05-lessons-learned.md)
-
-[Optional appendices](docs/appendices.md) cover tokens, cost, Copilot diagnostics and customization locations.
+[Start the workshop](docs/README.md).

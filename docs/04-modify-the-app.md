@@ -29,7 +29,9 @@ Create a new (or edit the existing) copilot-instructions.md to add this instruct
 
 - "when I ask you to implement fixes/adjustments/fine-tuning/refactorings consider adding these as rules/conventions in the .github/copilot-instructions.md file. If any fixes are bigger than simple instructions then create a new SKILL tailored to that purpose."
 
-Proceed to continue down the prior list of *potential* issues that I asked you to identify, address each item individually, stage the changes for a manual review. Only continue to resolve the next issue after I give you the go-ahead to commit the previous update or ask you to skip the manual review process and progress through the list in an unattended fashion.
+Proceed to continue down the prior list of *potential* issues that I asked you to identify, address each item individually, stage the changes for a manual review.
+
+Only continue to resolve the next issue after I give you the go-ahead to commit the previous update or ask you to skip the manual review process and progress through the list in an unattended fashion.
 
 When complete run a build.
 ```
@@ -40,8 +42,9 @@ Prompt Copilot:
 
 ```text
 I find minimal Web APIs hard to read/debug and prefer the architecture of older MVC-style Controllers with attributes. Create a new "dotnet-webapi" skill, make the skill concise but populate it with best practices around Web API using Controllers, i.e. Attributes, TypedResults, ProblemDetails, etc... Specify that minimal APIs are to be avoided wherever possible.
+Controllers should live in the Controllers/ folder, if minimal APIs are to be kept these files should live in an Endpoints/ folder.
 
-Commit the skill automatically when the first-draft is complete.
+Commit the skill automatically when created.
 ```
 
 ## 4. Check the new SKILL is pick-up

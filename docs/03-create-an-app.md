@@ -4,7 +4,7 @@
 
 ## 1. Setup Branch/Agent
 
-- Sync this branch `origin/main` to get the latest instructions.
+- Sync this branch `origin/main`, then create a new local feature branch e.g. '[username]/workshop1'
 - In vscode Github Copilot chat extension;
   - Set Agent to be "Agent" this is to increase workshop velocity.
   - Set Model model to be either "Auto" or a different model from your neighbour, this is to allow comparisions.
